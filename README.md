@@ -1,11 +1,9 @@
-/*###########################################
+
 # Alexandros Angelakis                      #
 # csd4334                                   #
 # Exercise 3 ~ HY255                        #
 # csd4334@csd.uoc.gr                        #
 # angelakis@ics.forth.gr                    #
-#############################################*/
-
 
 1) I made the Symtable_put function so it adds the new node at the beggining of the list, to reduce the time complexity of the function.
 
