@@ -6,6 +6,7 @@
 # angelakis@ics.forth.gr                    #
 #############################################*/
 
+
 1) I made the Symtable_put function so it adds the new node at the beggining of the list, to reduce the time complexity of the function.
 
 2) I added a new function in symtable.h ("void print(Symtable_T oSymTable);") to print each key with its value. The value is in hexadecimal.
