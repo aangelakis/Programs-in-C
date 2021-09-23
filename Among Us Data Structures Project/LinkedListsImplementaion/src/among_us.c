@@ -1,5 +1,5 @@
 /**
- * @author Alexandros Angelakis csd4334 
+ * @author Alexandros Angelakis csd4334@csd.uoc.gr , angelakis@ics.forth.gr 
  *
  * When an event is showing "failed" in the test files output
  * then: 1. malloc returns NULL
@@ -320,7 +320,8 @@ int eject_player(int pid) {
 		}
 		merge_tasks_list(&q, &found_player_with_least_tasks);
 		}
-	
+
+	
    if(eject_dont_print !=2 && eject_dont_print !=3){
         printf("E %d\n", pid);
         print_double_list2();
