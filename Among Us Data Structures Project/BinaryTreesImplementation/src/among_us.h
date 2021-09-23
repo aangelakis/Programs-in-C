@@ -3,9 +3,9 @@
  * file: among_us.h                               *
  *                                                *
  *                                                *
- * @Author  Skerdi Basha                          *
+ * @Author  Skerdi Basha , Alexandros Angelakis   *
  * @Version 1-12-2020                             *
- * @email   sbash@csd.uoc.gr                      *
+ * @email   sbash@csd.uoc.gr, angelakis@ics.forth.gr *
  *                                                *
  * @brief   Header file for the needs of CS-240   *
  * project 2020, with the structures and function *
