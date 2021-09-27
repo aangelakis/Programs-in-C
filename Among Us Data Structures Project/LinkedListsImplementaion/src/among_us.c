@@ -17,8 +17,6 @@
  *
  * @return 1 on success
  *         0 on failure
- *
- * Time complexity: O(1)
  */
 int initialize() {
     eject_dont_print = 1;
@@ -59,8 +57,6 @@ int initialize() {
  * @param is_alien The variable that decides if he is an alien or not
  * @return 1 on success
  *         0 on failure
- *
- * Time complexity: O(1)
  *
  * Event P
  */
@@ -110,9 +106,6 @@ int register_player(int pid,int is_alien) {
  * @return 1 on success
  *         0 on failure
  *
- * Time Complexity: O(n) (where n is the number of tasks inside the General Task List)
- *                     because of the function insert_sorted() which has O(n) time complexity
- *
  * Event T
  */
 int insert_task(int tid,int difficulty) {
@@ -146,8 +139,6 @@ int insert_task(int tid,int difficulty) {
  * @brief Distribute tasks to the players
  *
  * Event D
- *
- * Time Complexity: O(m), where m is the total number of tasks in the general tasks list
  *
  * @return 1 on success
  *         0 on failure
@@ -200,9 +191,6 @@ int distribute_tasks() {
  *
  * @return 1 on success
  *         0 on failure
- *
- * Time complexity: O(n + m), where m is the number of tasks the given player has in his
- *                          tasks list and n is the number of players in the players' list.
  *
  * Event I
  */
@@ -265,11 +253,6 @@ int implement_task(int pid, int difficulty) {
  *
  * @return 1 on success
  *         0 on failure
- *
- * Time complexity: O(n1+n2+2*n), where n1 is the number of tasks the given player has in
- *                                  his tasks list, n2 is the number of tasks the player with
- *                                  the least tasks has in his tasks list and n is the number of
- *                                  players in the players list.
  *
  * Event E
  */
@@ -343,11 +326,6 @@ int eject_player(int pid) {
  * @return 1 on success
  *         0 on failure
  *
- * Time complexity: O(n1+n2+2*n), where n1 is the number of tasks the given player has in
- *                               his tasks list, n2 is the number of tasks the player with
- *                               the least tasks has in his tasks list and n is the number of
- *                               players in the players list.
- *
  * Event W
  */
 int witness_eject(int pid, int pid_a, int number_of_witnesses){
@@ -380,10 +358,6 @@ int witness_eject(int pid, int pid_a, int number_of_witnesses){
  *
  * @return 1 on success
  *         0 on failure
- *
- * Time complexity: O(2*n + number_of_tasks), where n is the number of players
- *                                               in the players' list and number_of_tasks
- *                                               is the numbers of tasks to be popped.
  *
  * Event S
  */
@@ -433,11 +407,6 @@ int sabbotage(int pid, int number_of_tasks) {
  * @return 1 on success
  *         0 on failure
  *
- * Time complexity: O(3*n+n1+n2), where n1 is the number of tasks the given player has in
- *                               his tasks list, n2 is the number of tasks the player with
- *                               the least tasks has in his tasks list and n is the number of
- *                               players in the players list.
- *
  * Event V
  */
 int vote(int pid, int vote_evidence) {
@@ -481,11 +450,6 @@ int vote(int pid, int vote_evidence) {
  *
  * @return 1 on success
  *         0 on failure
- *
- * Time complexity: O(max+n2+n*m), where max is the max tasks a player has, n2 is the number
- *                                      of tasks the Player with the least tasks have, n is the number
- *                                      of players in the players' list and m is the number of tasks the
- *                                      current player has in the while loop.
  *
  * Event G
  */
@@ -531,8 +495,6 @@ int give_work() {
  *
  * @return 1 on success
  *         0 on failure
- *
- * Time complexity: O(n), where n is the number of players in the player's list.
  *
  * Event F
  */
