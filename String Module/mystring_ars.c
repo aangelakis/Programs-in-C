@@ -54,7 +54,8 @@ char* ms_ncopy(char dest[], const char src[], size_t n){
 
     int i = 0; /* The index of the arrays. */
 
-    assert(src || dest); /* Runtime Error for NULL input. */
+    assert(src); /* Runtime Error for NULL input. */
+    assert(dest); /* Runtime Error for NULL input. */
 
     while(n > 0){
 
@@ -83,7 +84,8 @@ char* ms_concat(char dest[], const char src[]){
     int i = 0; /* The index of the arrays. */
     size_t dest_len = ms_length(dest); /* The size of string 'dest' and the letters we have to skip for 'dest'. */
 
-    assert(dest || src); /* Runtime Error for NULL input. */
+    assert(src); /* Runtime Error for NULL input. */
+    assert(dest); /* Runtime Error for NULL input. */
 
     while(src[i] != '\0'){
 
@@ -106,7 +108,8 @@ char* ms_nconcat(char dest[], const char src[], size_t n){
     int i = 0; /* The index of the arrays. */
     size_t dest_len = ms_length(dest); /* The size of string 'dest' and the letters we have to skip for 'dest'. */
 
-    assert(dest || src); /* Runtime Error for NULL input. */
+    assert(src); /* Runtime Error for NULL input. */
+    assert(dest); /* Runtime Error for NULL input. */
 
     while(n > 0){
 
@@ -131,7 +134,8 @@ int ms_compare(const char str1[], const char str2[]){
 
     int i = 0; /* The index of the arrays. */
 
-    assert(str1 || str2); /* Runtime Error for NULL input. */
+    assert(str1); /* Runtime Error for NULL input. */
+    assert(str2); /* Runtime Error for NULL input. */
 
     while(str1[i] == str2[i]){ /* While we don't found a character that is not the same. */
 
@@ -155,7 +159,8 @@ int ms_ncompare(const char str1[], const char str2[], size_t n){
 
     int i = 0; /* The index of the arrays. */
 
-    assert(str1 || str2); /* Runtime Error for NULL input. */
+    assert(str1); /* Runtime Error for NULL input. */
+    assert(str2); /* Runtime Error for NULL input. */
 
     while(n > 0){ 
 
@@ -190,7 +195,9 @@ char* ms_search(const char haystack[], const char needle[]){
     int begin = 0; /* A variable that remembers the first occurance of the string needle in string haystack. */
     size_t needle_len = ms_length(needle); /* The length of the string needle. */
 
-    assert(haystack || needle); /* Runtime Error for NULL input. */
+    assert(haystack); /* Runtime Error for NULL input. */
+    assert(needle); /* Runtime Error for NULL input. */
+   
 
     while(haystack[i] != '\0'){ /* Keep looking for the string needle until haystack[i] is the character '\0'. */
 

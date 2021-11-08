@@ -1,13 +1,12 @@
 /***************************************************
- *                                                              *
- * file: among_us.c                                          *
- *                                                              *
- * @Author  Skerdi Basha                                  *
- * @Version 1-12-2020                                    *
- * @email   sbash@csd.uoc.gr                             *
- *                                                             *
- * @brief   Implementation of among_us.h              *
- *                                                             *
+ *                                                              
+ * file: among_us.c                                          
+ *                                                             
+ * @Author  Alexandros Angelakis                                                                 
+ * @email   csd4334@csd.uoc.gr , angelakis@ics.forth.gr                             
+ *                                                             
+ * @brief   Implementation of among_us.h             
+ *                                                               
  ***************************************************
  */
 
@@ -1232,5 +1231,3 @@ int main() {
     terminate();
     return 0;
 }
-
-

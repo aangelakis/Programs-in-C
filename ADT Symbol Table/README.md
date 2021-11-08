@@ -1,30 +1,36 @@
 
-# Alexandros Angelakis                      #
-# csd4334                                   #
-# Exercise 3 ~ HY255                        #
-# csd4334@csd.uoc.gr                        #
-# angelakis@ics.forth.gr                    #
+# Alexandros Angelakis                      
+# csd4334                                   
+# Exercise 3 ~ HY255                        
+# csd4334@csd.uoc.gr                        
+# angelakis@ics.forth.gr                    
 
+---
 1) I made the Symtable_put function so it adds the new node at the beggining of the list, to reduce the time complexity of the function.
 
+---
 2) I added a new function in symtable.h ("void print(Symtable_T oSymTable);") to print each key with its value. The value is in hexadecimal.
 
+---
 3) In testsymtab.c i tested two symtables, one for graphics card and their price and one for all the american presidents the last 50 years.
 
 My previous knowledge from the course: HY240 Data Structures, made this assignment a lot easier.
 
 Assignment took about 6-8 hours to complete.
 
+---
 Bonus: I tried implementing the bonus part (expanding hash table) but I couldn't because of some segmentation faults.
        It was working in some cases, but I decided not to include it in my solution of this exercise.
        Here's how I tried implementing it.
 
-First of all, I initialized three new functions, the first one -> int SymTable_isExpandable(SymTable_T oSymTable); is checking if oSymTable is expandable. If you are to put a new node in the table
-                                                                  and the number of buckets in it surpass a limit, then return 1 (Expandable). 0 otherwise (not Expandable). */
+First of all, I initialized three new functions:
 
-                                                 the second one -> int SymTable_expand(SymTable_T oSymTable); is expanding the oSymTable.
+the first one -> int SymTable_isExpandable(SymTable_T oSymTable); is checking if oSymTable is expandable. If you are to put a new node in the table
+                                                                  and the number of buckets in it surpass a limit, then return 1 (Expandable). 0 otherwise (not Expandable).
+                                                                  
+the second one -> int SymTable_expand(SymTable_T oSymTable); is expanding the oSymTable.
 
-                                                 and the third one -> int SymTable_putWithoutExpanding(SymTable_T oSymTable, const char *pcKey, const void *pvValue); is putting bindings into oSymTable
+and the third one -> int SymTable_putWithoutExpanding(SymTable_T oSymTable, const char *pcKey, const void *pvValue); is putting bindings into oSymTable
                                                                       without checking if it needs expanding.
 
 I also had a global variable -> unsigned int current_buckets = 509;  Initialize the current buckets with 509 (the first limit).
